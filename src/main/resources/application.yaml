@@ -18,5 +18,8 @@ spring:
   docker:
     compose:
       lifecycle-management: start-only
+  shell:
+    interactive:
+      enabled: true
 
 

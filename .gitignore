@@ -34,3 +34,4 @@ build/
 
 ### Custom ###
 /src/main/resources/docs/spring-boot-reference.pdf
+*.log

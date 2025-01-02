@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: sbdocs
+  # May not be necessary - auto configured by spring boot when running PGVector via Docker Compose
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sbdocs
+    username: admin
+    password: password
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+  docker:
+    compose:
+      lifecycle-management: start-only
+
+
